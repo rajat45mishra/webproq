@@ -1,0 +1,42 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Asset Correspondance </p>
+     </div>
+<form class="subform">
+    <form method = "POST" action="{{url_for( 'AssetCorrespondanceForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNumber.label}}
+              {{form.AssetNumber}}
+              {{form.UserGuide.label}}
+              {{form.UserGuide}}
+        </div>
+        <br>
+              {{form.WarrentyCard.label}}
+              <br>
+              {{form.WarrentyCard}}
+              <br>
+        <div class = "input">
+              {{form.BillNumber.label}}
+              {{form.BillNumber}}
+              <br>
+        </div>
+            <p> Mode of Payment</p>
+              <br>
+            </p<label><input type="radio" name="paymentmode1" value="Cash"> Cash</label>
+            <label><input type="radio" name="paymentmode1" value="Debit Card"> Debit Card</label>
+            <label><input type="radio" name="paymentmode1" value="Credit Card"> Credit Card</label>
+            <label><input type="radio" name="paymentmode1" value="Online Wallet">Online Wallet</label></p>
+            <br>
+          <div class = "input">
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+          
+        </div>
+</form>
+    </form>
+    {% endblock content %}
+        
+        

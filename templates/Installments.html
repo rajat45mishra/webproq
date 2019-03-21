@@ -1,0 +1,45 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+		<p>Installment</p>
+     </div>
+<form class="subform">
+    <form method = "POST" action="{{url_for( 'InstallmentForm' )}}">
+        {{ form.csrf_token }}
+        <div class="input">
+              {{form.AssetNumber.label}}
+              {{form.AssetNumber}}
+              {{form.DueDate.label}}
+              {{form.DueDate}}
+              {{form.Payment.label}}
+              {{form.Payment}}
+        </div>
+            <p> Mode of Payment</p>
+              <br>
+            </p<label><input type="radio" name="paymentmode1" value="Cash"> Cash</label>
+            <label><input type="radio" name="paymentmode1" value="Debit Card"> Debit Card</label>
+            <label><input type="radio" name="paymentmode1" value="Credit Card"> Credit Card</label>
+            <label><input type="radio" name="paymentmode1" value="Online Wallet">Online Wallet</label></p>
+            <br>
+          <div class = "input">
+              {{form.EnterAmt.label}}
+              {{form.EnterAmt}}
+              {{form.RemBal.label}}
+              {{form.RemBal}}
+          </div>
+              {{form.PaymentRecpt.label}}
+              <br>
+              {{form.PaymentRecpt}}
+              
+          <div class = "input">
+              <br>
+              {{ form.Submit }}
+              <br>
+              {{ form.Modify }}
+          
+        </div>
+</form>
+    </form>
+    {% endblock content %}
+        
+        
