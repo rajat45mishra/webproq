@@ -52,7 +52,7 @@ psutil==5.6.1
 pycodestyle==2.5.0
 pycparser==2.19
 pyflakes==2.1.1
-Pygments==2.3.1
+Pygments==2.7.4
 pylint==2.2.2
 pymssql==2.1.4
 PyMySQL==0.9.3
